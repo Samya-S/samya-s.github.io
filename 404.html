@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    var path = window.location.pathname;
+
+    if (path.startsWith("/jeechallenger")) {
+      // Forward JEE Challenger paths and sublinks to jeechallenger.vercel.app
+      var newPath = path.replace(/^\/jeechallenger/, "");
+      window.location.replace("https://jeechallenger.vercel.app" + newPath);
+    } else {
+      // Forward all other unknown routes to portfolio
+      window.location.replace("https://samyasaha.vercel.app/");
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
